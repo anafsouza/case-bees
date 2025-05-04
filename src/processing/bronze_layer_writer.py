@@ -1,6 +1,5 @@
 import json
 import boto3
-from datetime import datetime
 from typing import List, Dict
 from ..utils.logs import Logger
 
@@ -27,8 +26,8 @@ class BronzeLayerWriter:
             self.logger.warning("No data provided to write to Bronze layer.")
             return
 
-        date_partition = datetime.now()
-        file_key = f"{self.prefix}/{date_partition}/brewery_raw.jsonl"
+
+        file_key = f"{self.prefix}/brewery_raw.jsonl"
 
         try:
             jsonl_data = "\n".join([json.dumps(item) for item in data])
@@ -37,3 +36,4 @@ class BronzeLayerWriter:
 
         except Exception as e:
             self.logger.exception("Failed to write raw data to the Bronze layer.")
+

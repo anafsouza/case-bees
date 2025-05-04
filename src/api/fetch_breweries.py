@@ -1,5 +1,4 @@
 import requests
-import logging
 from typing import List, Dict, Optional
 from ..utils.logs import Logger
 
