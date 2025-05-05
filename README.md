@@ -62,6 +62,34 @@ To run the pipeline locally, you need to set up Airflow. Follow the steps below:
 
 ---
 
+Claro! Aqui está a seção adicional que você pode incluir no seu README, logo após a parte sobre Cloud Services ou em uma seção separada de "Additional Setup":
+
+---
+
+### PySpark Configuration
+
+This project uses **PySpark** as the primary processing engine. In most environments, the pipeline will run without additional setup, assuming you have a working local Spark installation and the necessary dependencies installed via `requirements.txt`.
+
+However, if you encounter any issues running PySpark—such as environment path errors, missing dependencies, or Spark session misconfiguration—you can refer to the setup guide provided in the repository.
+
+📄 **How-To Guide**:
+A complete tutorial for setting up PySpark on your machine is available in the `howto/` directory:
+
+```
+howto/how_to_setup_pyspark_locally.md
+```
+
+This document walks you through:
+
+* Installing Spark locally
+* Setting environment variables
+* Configuring your Python environment to work with Spark
+* Validating your setup with a simple Spark job
+
+Please consult this guide before opening an issue or reaching out for support.
+
+---
+
 ## Monitoring and Alerting
 
 To ensure the pipeline operates smoothly, it’s essential to implement monitoring and alerting mechanisms. Below are some steps for achieving this:
